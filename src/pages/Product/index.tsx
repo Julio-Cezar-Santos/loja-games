@@ -2,6 +2,10 @@ import { useParams } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 
+import resident from '../../assets/images/diablo.png'
+
+import Gallery from '../../components/Gallery'
+
 const Product = () => {
   const { id } = useParams()
   return (
@@ -36,19 +40,7 @@ const Product = () => {
           configurações do jogo.
         </p>
       </Section>
-      <Section title="Galeria" background="black">
-        <p>
-          A galeria de imagens e vídeos do jogo Hogwarts Legacy oferece uma
-          visão fascinante do mundo mágico, apresentando capturas de tela
-          impressionantes, trailers envolventes e artes conceituais que destacam
-          a beleza e a complexidade do jogo. Os jogadores podem explorar visuais
-          deslumbrantes de Hogwarts, criaturas mágicas e cenas emocionantes,
-          proporcionando uma prévia emocionante da experiência de jogo. Esta
-          galeria é uma celebração visual do universo de Harry Potter e uma
-          maneira perfeita de os fãs se prepararem para a aventura que os
-          aguarda.
-        </p>
-      </Section>
+      <Gallery defaultCover={resident} name="Diablo IV" />
     </>
   )
 }
